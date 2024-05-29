@@ -40,7 +40,7 @@ services:
     environment:
       - SERVICE_URL=http://judge-server:8080
       - BACKEND_URL=http://oj-backend:8000/api/judge_server_heartbeat/
-      - TOKEN=CHANGE_THIS
+      - TOKEN=MY_OJ_GOOD
       # - judger_debug=1
   
   oj-backend:
@@ -53,13 +53,14 @@ services:
       - judge-server
     volumes:
       - ./data/backend:/data
+      - ./app/dist:/app/dist
     environment:
       - POSTGRES_DB=onlinejudge
       - POSTGRES_USER=onlinejudge
       - POSTGRES_PASSWORD=onlinejudge
-      - JUDGE_SERVER_TOKEN=CHANGE_THIS
+      - JUDGE_SERVER_TOKEN=MY_OJ_GOOD
       # - FORCE_HTTPS=1
       # - STATIC_CDN_HOST=cdn.oj.com
     ports:
-      - "0.0.0.0:80:8000"
-      - "0.0.0.0:443:1443"
+      - "0.0.0.0:81:8000"
+      - "0.0.0.0:444:1443"

@@ -1,0 +1,17 @@
+#header .logo[data-v-74d7fb44] {
+  width: 96px;
+  height: 60px;
+  background-image: url(/static/img/acm-icpc.1077615e.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#header .logo div[data-v-74d7fb44] {
+  width: 96px;
+  height: 60px;
+}
+
+.content-app > .footer > p:nth-child(2) {
+  display: none;
+}
